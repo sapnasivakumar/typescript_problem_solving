@@ -1,11 +1,14 @@
 function leftRotation(arr: Array<number>, n:number): Array<number>{
 let result: Array<number>|undefined = [];
-while(n>0 && arr.length >0){
+while(n>0){
     let shiftedElement: number = arr.shift();
-    result = [...arr, shiftedElement];
+    
+    arr = [...arr, shiftedElement];
+    console.log("$$$$", arr); 
+    --n;
 }
-console.log("$$$$", result);
-return result;
+console.log("final result", arr);
+return arr;
 }
 
 export default leftRotation;
