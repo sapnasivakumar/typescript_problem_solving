@@ -43,17 +43,6 @@ function validParenthesis(s: string): boolean{
         size(): number;
       }
 
-      function isMatchingBracket(bracket: string): boolean{
-        if(bracket ==='('){
-            if(stack.peek() === ')'){
-                stack.pop();
-            } else {
-                result = false;
-            }
-        }
-        return false;
-      }
-
       class Stack<T> implements IStack<T> {
         private storage: T[] = [];
       

@@ -13,4 +13,7 @@ describe('testing contiguousSubstringVowels file', () => {
   test('shld return true if contiguous substring of vowels', () => {
     expect(contiguousSubstringVowels('aebcdefghij')).toBe(false);
   });
+  test('shld return true if contiguous substring of vowels', () => {
+    expect(contiguousSubstringVowels('ae')).toBe(false);
+  });
 });

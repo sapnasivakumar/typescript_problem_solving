@@ -12,7 +12,8 @@ function maxProfit(prices: number[]): number{
     let lowestPrice: number = prices[0];
     let lowestChanged: boolean = false;
     let diff: number = 0;
-    for(let k = 0; k< prices.length; k++){
+    // the for loop shld end when there is still scope to check prices[k+1] element 
+    for(let k = 0; k< prices.length-1; k++){
        if((prices[k+1] - lowestPrice > 0 ) && (diff < (prices[k+1] - lowestPrice))){
             diff = prices[k+1] - lowestPrice;
        } else if(prices[k+1] - lowestPrice < 0) {
