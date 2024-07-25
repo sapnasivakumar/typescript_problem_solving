@@ -7,7 +7,7 @@ beforeEach(() => {
 
 describe('fetch', () => {
 
-    test('testing promise.all', async () => {
+    test('testing promise.all 1', async () => {
       
     const promises = [
         () => new Promise(resolve => resolve(4)),
@@ -20,7 +20,7 @@ describe('fetch', () => {
        //assert using expect and strictlyequal
     });
 
-    test('testing promise.all', async () => {
+    test('testing promise.all 2', async () => {
       
         const promises = [
             () => new Promise(resolve => setTimeout(() => resolve(4), 50)), 
@@ -32,4 +32,18 @@ describe('fetch', () => {
         //    expect(result).toStrictEqual(transactionsList) ;
            //assert using expect and strictlyequal
         });
+        test('testing promise.all 3', async () => {
+      
+            const promises = [
+                () => new Promise(resolve => setTimeout(() => resolve(4), 50)), 
+                () => new Promise(resolve => setTimeout(() => resolve(10), 150)), 
+                () => new Promise(resolve => setTimeout(() => resolve(16), 100))
+            ]
+            //    const result =  multiplePromises(promises);
+            //    result.then((response)=> {
+            //     console.log("response", response);
+            //    })
+            //    expect(result).toStrictEqual(transactionsList) ;
+               //assert using expect and strictlyequal
+            });
 })
